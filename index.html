@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pneet | رسانه خبری، تحلیل بازار و بازارچه آگهی</title>
+<meta name="description" content="pneet — اخبار فناوری، هوش مصنوعی، بورس، خودرو، طلا و ارز به‌همراه بازارچه آگهی و امکان ثبت تبلیغات آنلاین.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <button class="burger" aria-label="باز کردن منو"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">pneet<span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">خانه</a>
+      <a href="category.html?c=tech">فناوری و هوش مصنوعی</a>
+      <a href="category.html?c=stock">بورس</a>
+      <a href="category.html?c=car">قیمت خودرو</a>
+      <a href="category.html?c=gold">طلا و سکه</a>
+      <a href="category.html?c=currency">ارز و رمزارز</a>
+      <a href="marketplace.html">بازارچه</a>
+    </nav>
+    <div class="mini-rates">
+      <span>طلا ۱۸ عیار <b class="tabular">۱۸,۸۳۶,۰۰۰</b> <span class="up">▲</span></span>
+      <span>دلار <b class="tabular">۱۹۴,۵۰۰</b> <span class="up">▲</span></span>
+    </div>
+    <div class="header-actions">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="search" placeholder="جست‌وجوی خبر، نماد یا محصول…">
+      </div>
+      <a href="ads.html" class="btn btn-cta btn-sm">ثبت آگهی</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ویجت شکیل قیمت‌های لحظه‌ای -->
+  <section class="section price-dashboard-section">
+    <div class="container">
+      <div class="price-dashboard">
+        <div class="price-dashboard-head">
+          <h2>💹 قیمت‌های لحظه‌ای بازار</h2>
+          <span class="price-dashboard-updated" id="priceUpdatedAt">آخرین به‌روزرسانی: هم‌اکنون</span>
+        </div>
+        <div class="price-dashboard-grid" id="priceDashboardGrid">
+          <div class="price-tile" data-key="dollar"><span class="icon">💵</span><span class="label">دلار آزاد</span><span class="value tabular">۱۹۴,۵۰۰</span><span class="delta up">▲ ۰.۵٪</span></div>
+          <div class="price-tile" data-key="euro"><span class="icon">💶</span><span class="label">یورو</span><span class="value tabular">۲۲۵,۶۰۰</span><span class="delta up">▲ ۰.۴٪</span></div>
+          <div class="price-tile" data-key="tether"><span class="icon">🟢</span><span class="label">تتر</span><span class="value tabular">۱۹۴,۰۰۰</span><span class="delta up">▲ ۰.۲٪</span></div>
+          <div class="price-tile" data-key="gold"><span class="icon">🥇</span><span class="label">طلای ۱۸ عیار</span><span class="value tabular">۱۸,۸۳۶,۰۰۰</span><span class="delta up">▲ ۰.۹٪</span></div>
+          <div class="price-tile" data-key="coin"><span class="icon">🪙</span><span class="label">سکه امامی</span><span class="value tabular">۱۸۹,۵۰۰,۰۰۰</span><span class="delta up">▲ ۰.۸٪</span></div>
+          <div class="price-tile" data-key="bitcoin"><span class="icon">₿</span><span class="label">بیت‌کوین (دلار)</span><span class="value tabular">۶۴,۸۰۰</span><span class="delta up">▲ ۰.۷٪</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ویجت بازارهای جهانی و نفت -->
+  <section class="section markets-section">
+    <div class="container">
+      <div class="markets-card">
+        <div class="markets-head">
+          <h2>🌍 بازارهای جهانی و نفت</h2>
+          <span class="markets-updated" id="marketsUpdatedAt">در حال بارگذاری…</span>
+        </div>
+        <div class="markets-grid" id="marketsGrid">
+          <div class="market-tile" data-key="brent"><span class="flag">🛢️</span><span class="label">نفت برنت</span><span class="value tabular">—</span><span class="delta">—</span></div>
+          <div class="market-tile" data-key="wti"><span class="flag">🛢️</span><span class="label">نفت WTI</span><span class="value tabular">—</span><span class="delta">—</span></div>
+          <div class="market-tile" data-key="sp500"><span class="flag">🇺🇸</span><span class="label">S&amp;P 500</span><span class="value tabular">—</span><span class="delta">—</span></div>
+          <div class="market-tile" data-key="dow"><span class="flag">🇺🇸</span><span class="label">داوجونز</span><span class="value tabular">—</span><span class="delta">—</span></div>
+          <div class="market-tile" data-key="nasdaq"><span class="flag">🇺🇸</span><span class="label">نزدک</span><span class="value tabular">—</span><span class="delta">—</span></div>
+          <div class="market-tile" data-key="nikkei"><span class="flag">🇯🇵</span><span class="label">نیک‌کی ۲۲۵</span><span class="value tabular">—</span><span class="delta">—</span></div>
+          <div class="market-tile" data-key="istanbul"><span class="flag">🇹🇷</span><span class="label">بورس استانبول</span><span class="value tabular">—</span><span class="delta">—</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:32px;">
+    <div class="container hero-grid">
+      <a href="article.html" class="hero-main" style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop');">
+        <span class="tag">فناوری</span>
+        <span class="stamp">تازه‌ترین</span>
+        <div>
+          <h1>عرضه نسل تازه پردازنده‌های هوش مصنوعی؛ گامی برای پردازش سریع‌تر در دستگاه‌های خانگی</h1>
+          <div class="meta"><span>گروه فناوری pneet</span><span>۲ ساعت پیش</span></div>
+        </div>
+      </a>
+
+      <div class="hero-list">
+        <a href="article.html" class="hero-list-item">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop');"></div>
+          <div><div class="cat">بورس</div><h4>رشد شاخص کل بازار سرمایه در معاملات امروز</h4></div>
+        </a>
+        <a href="article.html" class="hero-list-item">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1542282088-fe8426682b8f?w=400&h=250&fit=crop');"></div>
+          <div><div class="cat">قیمت خودرو</div><h4>تغییر قیمت خودروهای داخلی در بازار این هفته</h4></div>
+        </a>
+        <a href="article.html" class="hero-list-item">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=400&h=250&fit=crop');"></div>
+          <div><div class="cat">طلا و سکه</div><h4>پیش‌بینی روند قیمت طلا برای هفته پیش‌رو</h4></div>
+        </a>
+        <a href="article.html" class="hero-list-item">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=200&h=200&fit=crop');"></div>
+          <div><div class="cat">ارز دیجیتال</div><h4>نوسان بازار رمزارزها پس از اعلام نرخ بهره جهانی</h4></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- فناوری و هوش مصنوعی -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>فناوری و هوش مصنوعی</h2>
+        <a href="category.html?c=tech" class="see-all">مشاهده همه ←</a>
+      </div>
+      <div class="news-grid" data-news-cat="tech">
+        <a href="article.html" class="news-card featured">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&h=400&fit=crop');">
+            <span class="cat-badge">هوش مصنوعی</span>
+          </div>
+          <div class="body">
+            <h4>دستیارهای هوشمند، آینده جست‌وجوی اینترنتی را چگونه تغییر می‌دهند؟</h4>
+            <div class="time">۴۵ دقیقه پیش</div>
+          </div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop');"><span class="cat-badge">فناوری</span></div>
+          <div class="body"><h4>معرفی گوشی‌های میان‌رده جدید در بازار داخلی</h4><div class="time">۳ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=400&fit=crop');"><span class="cat-badge">اپلیکیشن</span></div>
+          <div class="body"><h4>به‌روزرسانی تازه پیام‌رسان‌های داخلی چه ویژگی‌هایی دارد؟</h4><div class="time">۵ ساعت پیش</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- بورس -->
+  <section class="section" style="background:var(--surface);">
+    <div class="container">
+      <div class="section-head">
+        <h2>بورس و بازار سرمایه</h2>
+        <a href="category.html?c=stock" class="see-all">مشاهده همه ←</a>
+      </div>
+      <div class="news-grid" data-news-cat="stock">
+        <a href="article.html" class="news-card featured">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop');"><span class="cat-badge">بورس</span></div>
+          <div class="body"><h4>تحلیل روند هفتگی شاخص کل و گروه‌های پیشرو بازار سرمایه</h4><div class="time">۱ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop');"><span class="cat-badge">بورس</span></div>
+          <div class="body"><h4>ورود نقدینگی تازه به نمادهای پتروشیمی</h4><div class="time">۲ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop');"><span class="cat-badge">صندوق</span></div>
+          <div class="body"><h4>مقایسه بازدهی صندوق‌های درآمد ثابت در سه‌ماهه اخیر</h4><div class="time">۶ ساعت پیش</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- خودرو -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>قیمت خودرو</h2>
+        <a href="category.html?c=car" class="see-all">مشاهده همه ←</a>
+      </div>
+      <div class="news-grid" data-news-cat="car">
+        <a href="article.html" class="news-card featured">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1542282088-fe8426682b8f?w=400&h=250&fit=crop');"><span class="cat-badge">خودرو داخلی</span></div>
+          <div class="body"><h4>جدول کامل قیمت محصولات ایران‌خودرو و سایپا در بازار امروز</h4><div class="time">۳۰ دقیقه پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=400&fit=crop');"><span class="cat-badge">خودرو خارجی</span></div>
+          <div class="body"><h4>تغییر تعرفه واردات خودرو چه تأثیری بر قیمت‌ها دارد؟</h4><div class="time">۲ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&h=400&fit=crop');"><span class="cat-badge">موتورسیکلت</span></div>
+          <div class="body"><h4>رشد قیمت موتورسیکلت‌های داخلی در هفته اخیر</h4><div class="time">۴ ساعت پیش</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- طلا و ارز -->
+  <section class="section" style="background:var(--surface);">
+    <div class="container">
+      <div class="section-head">
+        <h2>طلا، سکه و ارز</h2>
+        <a href="category.html?c=gold" class="see-all">مشاهده همه ←</a>
+      </div>
+      <div class="news-grid" data-news-cat="gold">
+        <a href="article.html" class="news-card featured">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=400&h=250&fit=crop');"><span class="cat-badge">طلا</span></div>
+          <div class="body"><h4>چرا قیمت طلا در هفته‌های اخیر نوسان بیشتری داشته است؟</h4><div class="time">۱ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=600&h=400&fit=crop');"><span class="cat-badge">ارز</span></div>
+          <div class="body"><h4>پیش‌بینی کارشناسان از نرخ دلار در ماه آینده</h4><div class="time">۳ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=600&h=400&fit=crop');"><span class="cat-badge">رمزارز</span></div>
+          <div class="body"><h4>تحلیل تکنیکال بیت‌کوین در کوتاه‌مدت</h4><div class="time">۵ ساعت پیش</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- بازارچه پیشنهادی -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>بازارچه پیشنهادی</h2>
+        <a href="marketplace.html" class="see-all">مشاهده همه ←</a>
+      </div>
+      <div class="carousel">
+        <a href="product.html" class="product-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&h=400&fit=crop');"><span class="promo">آگهی</span></div>
+          <div class="body"><h4>لپ‌تاپ اداری، رم ۱۶ گیگ، کارکرد کم</h4><div class="price tabular">۲۸,۵۰۰,۰۰۰ تومان</div><div class="loc">تهران</div></div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1571175443880-49e1d58b794a?w=600&h=400&fit=crop');"><span class="promo">آگهی</span></div>
+          <div class="body"><h4>یخچال دو قلو، نو، گارانتی معتبر</h4><div class="price tabular">۴۱,۲۰۰,۰۰۰ تومان</div><div class="loc">اصفهان</div></div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop');"><span class="promo">آگهی</span></div>
+          <div class="body"><h4>خودرو پراید ۱۳۱، مدل ۱۴۰۰</h4><div class="price tabular">۳۹۰,۰۰۰,۰۰۰ تومان</div><div class="loc">شیراز</div></div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=400&fit=crop');"><span class="promo">آگهی</span></div>
+          <div class="body"><h4>گوشی سامسونگ، ۱۲۸ گیگ، رنگ مشکی</h4><div class="price tabular">۱۹,۹۰۰,۰۰۰ تومان</div><div class="loc">مشهد</div></div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=400&fit=crop');"><span class="promo">آگهی</span></div>
+          <div class="body"><h4>دوچرخه کوهستان، سایز ۲۶</h4><div class="price tabular">۷,۸۰۰,۰۰۰ تومان</div><div class="loc">تبریز</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- بنر تبلیغاتی -->
+  <section class="container">
+    <div class="inline-ad">
+      <span class="label">تبلیغات</span>
+      جای بنر تبلیغاتی شما — <a href="ads.html" style="color:var(--accent-dark);font-weight:700;">ثبت سفارش آگهی</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-col footer-about">
+      <a href="index.html" class="logo" style="color:#fff;">pneet<span class="dot">.</span></a>
+      <p>رسانه خبری و تحلیلی pneet — پوشش شبانه‌روزی اخبار فناوری، بازار سرمایه، خودرو، طلا و ارز، همراه با بازارچه آگهی آنلاین.</p>
+      <div class="social-contact-bar" aria-label="راه‌های ارتباطی pneet">
+        <a href="https://t.me/pneet" target="_blank" rel="noopener"><span class="ico">✈️</span> تلگرام</a>
+        <a href="https://instagram.com/pneet.ir" target="_blank" rel="noopener"><span class="ico">📷</span> اینستاگرام</a>
+        <a href="tel:09363114489"><span class="ico">📞</span> ۰۹۳۶۳۱۱۴۴۸۹</a>
+        <a href="mailto:pneet.ir@gmail.com"><span class="ico">✉️</span> ایمیل</a>
+        <a href="#" class="is-soon"><span class="ico">💬</span> بله (به‌زودی)</a>
+        <a href="#" class="is-soon"><span class="ico">🔴</span> روبیکا (به‌زودی)</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>دسترسی سریع</h5>
+      <ul>
+        <li><a href="category.html?c=tech">فناوری و هوش مصنوعی</a></li>
+        <li><a href="category.html?c=stock">بورس</a></li>
+        <li><a href="category.html?c=car">قیمت خودرو</a></li>
+        <li><a href="marketplace.html">بازارچه</a></li>
+        <li><a href="ads.html">ثبت تبلیغات</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>درباره pneet</h5>
+      <ul>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس با ما</a></li>
+        <li><a href="#">حریم خصوصی</a></li>
+        <li><a href="#">قوانین انتشار آگهی</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>عضویت در خبرنامه</h5>
+      <p style="font-size:13px;color:#9AA6BC;margin-bottom:10px;">تازه‌ترین اخبار را در ایمیل خود دریافت کنید.</p>
+      <form class="newsletter" onsubmit="return false;">
+        <input type="email" placeholder="ایمیل شما" required>
+        <button class="btn btn-cta btn-sm" type="submit">عضویت</button>
+      </form>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© ۱۴۰۴ pneet. تمامی حقوق محفوظ است.</span>
+    <div class="trust-badges">
+      <span class="b">نماد اعتماد الکترونیکی</span>
+      <span class="b">درگاه پرداخت امن</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

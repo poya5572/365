@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فناوری و هوش مصنوعی | pneet</title>
+<meta name="description" content="آرشیو کامل اخبار فناوری، هوش مصنوعی و دسته‌بندی‌های مرتبط در pneet.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <button class="burger" aria-label="باز کردن منو"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">pneet<span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="index.html">خانه</a>
+      <a href="category.html?c=tech" data-nav-cat="tech">فناوری و هوش مصنوعی</a>
+      <a href="category.html?c=stock" data-nav-cat="stock">بورس</a>
+      <a href="category.html?c=car" data-nav-cat="car">قیمت خودرو</a>
+      <a href="category.html?c=gold" data-nav-cat="gold">طلا و سکه</a>
+      <a href="category.html?c=currency" data-nav-cat="currency">ارز و رمزارز</a>
+      <a href="marketplace.html">بازارچه</a>
+    </nav>
+    <div class="mini-rates">
+      <span>طلا ۱۸ عیار <b class="tabular" data-rate="gold">۱۸,۸۳۶,۰۰۰</b> <span class="up">▲</span></span>
+      <span>دلار <b class="tabular" data-rate="dollar">۱۹۴,۵۰۰</b> <span class="up">▲</span></span>
+    </div>
+    <div class="header-actions">
+      <div class="search-box"><span>🔍</span><input type="search" placeholder="جست‌وجو در این دسته…"></div>
+      <a href="ads.html" class="btn btn-cta btn-sm">ثبت آگهی</a>
+    </div>
+  </div>
+</header>
+
+<div class="ticker-strip">
+  <div class="container">
+    <div class="ticker-track">
+      <div class="ticker-item">سکه امامی <b class="tabular">۱۸۹,۵۰۰,۰۰۰</b> <span class="delta up">▲ ۰.۸٪</span></div>
+      <div class="ticker-item">دلار آزاد <b class="tabular">۱۹۴,۵۰۰</b> <span class="delta up">▲ ۰.۵٪</span></div>
+      <div class="ticker-item">شاخص بورس <b class="tabular">۲,۱۴۵,۰۰۰</b> <span class="delta up">▲ ۱.۲٪</span></div>
+      <div class="ticker-item">یورو <b class="tabular">۲۲۵,۶۰۰</b> <span class="delta up">▲ ۰.۴٪</span></div>
+    </div>
+  </div>
+</div>
+
+<main class="container" style="padding:28px 20px 60px;">
+  <div class="breadcrumb">
+    <a href="index.html">خانه</a> / <span id="breadcrumbCurrent">فناوری و هوش مصنوعی</span>
+  </div>
+  <h1 id="pageTitle" style="font-size:26px;margin-bottom:22px;">فناوری و هوش مصنوعی</h1>
+
+  <!-- جدول تفصیلی طلا، سکه و ارز — فقط در دسته «طلا و سکه» و «ارز و رمزارز» نمایش داده می‌شود -->
+  <div class="detail-price-table" id="goldCurrencyTable" style="display:none;">
+    <div class="dpt-head">
+      <h3>جدول لحظه‌ای طلا، سکه و ارز</h3>
+      <span class="dpt-updated" id="dptUpdatedGold">آخرین به‌روزرسانی: هم‌اکنون</span>
+    </div>
+    <div class="dpt-group">
+      <h4>سکه</h4>
+      <div class="dpt-grid">
+        <div class="dpt-row"><span class="n">سکه امامی</span><span class="v tabular" data-dpt="coin_emami">۱۸۸,۵۱۰,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">سکه بهار آزادی</span><span class="v tabular" data-dpt="coin_bahar">۱۸۵,۰۰۰,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">نیم سکه</span><span class="v tabular" data-dpt="coin_half">۹۶,۰۰۰,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">ربع سکه</span><span class="v tabular" data-dpt="coin_quarter">۵۴,۰۰۰,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">سکه گرمی</span><span class="v tabular" data-dpt="coin_gerami">۲۷,۵۰۰,۰۰۰</span><span class="d up">▲</span></div>
+      </div>
+    </div>
+    <div class="dpt-group">
+      <h4>طلا</h4>
+      <div class="dpt-grid">
+        <div class="dpt-row"><span class="n">طلای ۱۸ عیار (هر گرم)</span><span class="v tabular" data-dpt="gold_18">۱۸,۳۹۸,۵۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">طلای ۲۴ عیار (هر گرم)</span><span class="v tabular" data-dpt="gold_24">۲۴,۵۲۵,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">مثقال طلا</span><span class="v tabular" data-dpt="gold_mesghal">۷۹,۶۹۹,۵۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">انس جهانی</span><span class="v tabular" data-dpt="gold_ounce">۳,۹۹۱ دلار</span><span class="d up">▲</span></div>
+      </div>
+    </div>
+    <div class="dpt-group">
+      <h4>ارزهای خارجی</h4>
+      <div class="dpt-grid">
+        <div class="dpt-row"><span class="n">دلار آمریکا</span><span class="v tabular" data-dpt="dollar">۱۹۴,۵۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">یورو</span><span class="v tabular" data-dpt="euro">۲۲۵,۶۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">پوند انگلیس</span><span class="v tabular" data-dpt="pound">۲۴۶,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">درهم امارات</span><span class="v tabular" data-dpt="dirham">۵۳,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">لیر ترکیه</span><span class="v tabular" data-dpt="lira">۴,۰۰۰</span><span class="d down">▼</span></div>
+        <div class="dpt-row"><span class="n">تتر (USDT)</span><span class="v tabular" data-dpt="tether">۱۹۴,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">بیت‌کوین</span><span class="v tabular" data-dpt="bitcoin">۶۴,۸۰۰ دلار</span><span class="d up">▲</span></div>
+      </div>
+    </div>
+    <p class="dpt-note">این جدول یک عکس لحظه‌ای مرجع است. برای اتصال به قیمت کاملاً زنده، بک‌اند‌های پوشه <code>api/</code> را روی هاست خود فعال کنید.</p>
+  </div>
+
+  <!-- جدول تفصیلی قیمت خودرو — فقط در دسته «قیمت خودرو» نمایش داده می‌شود -->
+  <div class="detail-price-table" id="carPriceTable" style="display:none;">
+    <div class="dpt-head">
+      <h3>جدول قیمت روز خودرو (بازار آزاد)</h3>
+      <span class="dpt-updated">آخرین به‌روزرسانی: مرداد ۱۴۰۵</span>
+    </div>
+    <div class="dpt-group">
+      <h4>سایپا</h4>
+      <div class="dpt-grid">
+        <div class="dpt-row"><span class="n">کوییک آر</span><span class="v tabular">۱,۳۲۰,۰۰۰,۰۰۰</span><span class="d">—</span></div>
+        <div class="dpt-row"><span class="n">ساینا S</span><span class="v tabular">۱,۲۶۰,۰۰۰,۰۰۰</span><span class="d up">▲</span></div>
+        <div class="dpt-row"><span class="n">شاهین دنده‌ای</span><span class="v tabular">۲,۴۰۰,۰۰۰,۰۰۰</span><span class="d">—</span></div>
+        <div class="dpt-row"><span class="n">شاهین اتوماتیک پلاس</span><span class="v tabular">۲,۹۰۰,۰۰۰,۰۰۰</span><span class="d">—</span></div>
+        <div class="dpt-row"><span class="n">اطلس G</span><span class="v tabular">۱,۵۴۰,۰۰۰,۰۰۰</span><span class="d up">▲</span></div>
+      </div>
+    </div>
+    <div class="dpt-group">
+      <h4>ایران خودرو</h4>
+      <div class="dpt-grid">
+        <div class="dpt-row"><span class="n">دنا پلاس توربو (۶دنده)</span><span class="v tabular">۲,۱۵۰,۰۰۰,۰۰۰</span><span class="d down">▼</span></div>
+        <div class="dpt-row"><span class="n">پژو ۲۰۷ اتوماتیک پانوراما</span><span class="v tabular">۲,۷۰۰,۰۰۰,۰۰۰</span><span class="d down">▼</span></div>
+        <div class="dpt-row"><span class="n">تارا دستی V1</span><span class="v tabular">۱,۹۲۵,۰۰۰,۰۰۰</span><span class="d down">▼</span></div>
+        <div class="dpt-row"><span class="n">تارا اتوماتیک V4</span><span class="v tabular">۲,۶۰۱,۰۰۰,۰۰۰</span><span class="d down">▼</span></div>
+        <div class="dpt-row"><span class="n">سمند سورن پلاس</span><span class="v tabular">۱,۵۹۰,۰۰۰,۰۰۰</span><span class="d down">▼</span></div>
+        <div class="dpt-row"><span class="n">ری‌را</span><span class="v tabular">۳,۶۰۰,۰۰۰,۰۰۰</span><span class="d down">▼</span></div>
+      </div>
+    </div>
+    <p class="dpt-note">قیمت‌ها نمونه و مرجع هستند و روزانه در بازار تغییر می‌کنند؛ برای قیمت رسمی و به‌روز از منابع تخصصی خودرو مثل ایران‌جیب یا کارنامه استعلام بگیرید.</p>
+  </div>
+
+  <!-- ویجت شکیل قیمت — برای دسته‌های طلا/ارز، جایگزین بخش اخبار عمومی -->
+
+  <div class="market-layout">
+    <!-- فیلترها -->
+    <details class="filter-panel">
+      <summary>فیلتر اخبار</summary>
+      <div class="filter-groups-row">
+        <div class="filter-group">
+          <legend>زیر‌دسته:</legend>
+          <div class="chip-row">
+            <button class="chip is-active">همه</button>
+            <button class="chip">هوش مصنوعی</button>
+            <button class="chip">موبایل و گجت</button>
+            <button class="chip">اپلیکیشن</button>
+            <button class="chip">اینترنت اشیا</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <legend>بازه زمانی:</legend>
+          <div class="chip-row">
+            <button class="chip is-active">۲۴ ساعت</button>
+            <button class="chip">هفته اخیر</button>
+            <button class="chip">ماه اخیر</button>
+            <button class="chip">آرشیو کامل</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <legend>برچسب‌ها:</legend>
+          <div class="chip-row">
+            <button class="chip">چت‌بات</button>
+            <button class="chip">تراشه</button>
+            <button class="chip">استارتاپ</button>
+            <button class="chip">امنیت سایبری</button>
+            <button class="chip">۵G</button>
+            <button class="chip">متاورس</button>
+          </div>
+        </div>
+
+        <button class="btn btn-ghost btn-sm">پاک‌کردن فیلترها</button>
+      </div>
+    </details>
+
+    <!-- لیست اخبار -->
+    <section>
+      <div class="toolbar">
+        <span style="font-size:13px;color:var(--ink-soft);">۱۲۴ خبر یافت شد</span>
+        <div class="sort-tabs">
+          <button class="is-active">جدیدترین</button>
+          <button>پربازدیدترین</button>
+          <button>پرمناقشه‌ترین</button>
+        </div>
+      </div>
+
+      <div class="news-grid" style="grid-template-columns:repeat(3,1fr);">
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&h=400&fit=crop');"><span class="cat-badge">هوش مصنوعی</span></div>
+          <div class="body"><h4>مدل‌های زبانی جدید چه تفاوتی با نسخه‌های قبلی دارند؟</h4><div class="time">۴۵ دقیقه پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=400&fit=crop');"><span class="cat-badge">موبایل</span></div>
+          <div class="body"><h4>بررسی مشخصات گوشی‌های پرچمدار تازه بازار</h4><div class="time">۱ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop');"><span class="cat-badge">اپلیکیشن</span></div>
+          <div class="body"><h4>ویژگی تازه اپلیکیشن‌های پیام‌رسان داخلی</h4><div class="time">۲ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop');"><span class="cat-badge">امنیت</span></div>
+          <div class="body"><h4>هشدار کارشناسان درباره کلاهبرداری‌های اینترنتی تازه</h4><div class="time">۳ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop');"><span class="cat-badge">استارتاپ</span></div>
+          <div class="body"><h4>رشد سرمایه‌گذاری در استارتاپ‌های حوزه فین‌تک</h4><div class="time">۴ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop');"><span class="cat-badge">اینترنت اشیا</span></div>
+          <div class="body"><h4>خانه هوشمند؛ از رؤیا تا واقعیت امروز بازار ایران</h4><div class="time">۶ ساعت پیش</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb skeleton"></div>
+          <div class="body"><h4 class="skeleton" style="height:16px;border-radius:4px;color:transparent;">.</h4><div class="time skeleton" style="height:12px;width:60px;border-radius:4px;color:transparent;margin-top:8px;">.</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb skeleton"></div>
+          <div class="body"><h4 class="skeleton" style="height:16px;border-radius:4px;color:transparent;">.</h4><div class="time skeleton" style="height:12px;width:60px;border-radius:4px;color:transparent;margin-top:8px;">.</div></div>
+        </a>
+        <a href="article.html" class="news-card">
+          <div class="thumb skeleton"></div>
+          <div class="body"><h4 class="skeleton" style="height:16px;border-radius:4px;color:transparent;">.</h4><div class="time skeleton" style="height:12px;width:60px;border-radius:4px;color:transparent;margin-top:8px;">.</div></div>
+        </a>
+      </div>
+
+      <div style="text-align:center;margin-top:28px;">
+        <button class="btn btn-ghost">بارگذاری اخبار بیشتر</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-col footer-about">
+      <a href="index.html" class="logo" style="color:#fff;">pneet<span class="dot">.</span></a>
+      <p>رسانه خبری و تحلیلی pneet — پوشش شبانه‌روزی اخبار فناوری، بازار سرمایه، خودرو، طلا و ارز، همراه با بازارچه آگهی آنلاین.</p>
+      <div class="social-contact-bar" aria-label="راه‌های ارتباطی pneet">
+        <a href="https://t.me/pneet" target="_blank" rel="noopener"><span class="ico">✈️</span> تلگرام</a>
+        <a href="https://instagram.com/pneet.ir" target="_blank" rel="noopener"><span class="ico">📷</span> اینستاگرام</a>
+        <a href="tel:09363114489"><span class="ico">📞</span> ۰۹۳۶۳۱۱۴۴۸۹</a>
+        <a href="mailto:pneet.ir@gmail.com"><span class="ico">✉️</span> ایمیل</a>
+        <a href="#" class="is-soon"><span class="ico">💬</span> بله (به‌زودی)</a>
+        <a href="#" class="is-soon"><span class="ico">🔴</span> روبیکا (به‌زودی)</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>دسترسی سریع</h5>
+      <ul>
+        <li><a href="category.html?c=tech">فناوری و هوش مصنوعی</a></li>
+        <li><a href="category.html?c=stock">بورس</a></li>
+        <li><a href="category.html?c=car">قیمت خودرو</a></li>
+        <li><a href="marketplace.html">بازارچه</a></li>
+        <li><a href="ads.html">ثبت تبلیغات</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>درباره pneet</h5>
+      <ul>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس با ما</a></li>
+        <li><a href="#">حریم خصوصی</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>عضویت در خبرنامه</h5>
+      <form class="newsletter" onsubmit="return false;">
+        <input type="email" placeholder="ایمیل شما" required>
+        <button class="btn btn-cta btn-sm" type="submit">عضویت</button>
+      </form>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© ۱۴۰۴ pneet. تمامی حقوق محفوظ است.</span>
+    <div class="trust-badges"><span class="b">نماد اعتماد الکترونیکی</span><span class="b">درگاه پرداخت امن</span></div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
